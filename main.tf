@@ -4,7 +4,7 @@ data "oci_identity_availability_domains" "ads" {
 
 resource "oci_core_instance" "ubuntu_instance" {
     availability_domain = data.oci_identity_availability_domains.ads.availability_domains[2].name
-    compartment_id = "ocid1.vcn.oc1.iad.amaaaaaafr6xoeqavg6rim4v3rsgujr5xitdbjbh7eausgs5mumpnusepp4a"
+    compartment_id = "ocid1.compartment.oc1..aaaaaaaasn3hpff376jzwep4pam4yfoir3bgpelva7t62bm54uaakf7gvsma"
     fault_domain        = "CMoP:US-ASHBURN-AD-1"
     shape = "VM.Standard.E2.1.Micro"#"VM.Standard.A1.Flex"
     source_details {
